@@ -2,7 +2,7 @@
 
 An AI-powered passenger support prototype for airports, built as part of a technical assessment. The system combines a RAG-based chatbot, flight search, service directory, analytics dashboard, and human escalation into a single web application.
 
-Live Demo: https://ai-airport-concierge.onrender.com/
+**Live Demo:** https://ai-airport-concierge.onrender.com/
 
 
 ## Features
@@ -31,6 +31,7 @@ Live Demo: https://ai-airport-concierge.onrender.com/
 
 ## Project Structure
 
+```
 ai-airport-concierge/
 ├── backend/
 │   └── main.py
@@ -49,7 +50,7 @@ ai-airport-concierge/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
+```
 
 
 ## Setup Instructions
@@ -61,37 +62,44 @@ ai-airport-concierge/
 
 ### 1. Clone the repository
 
+```bash
 git clone https://github.com/liuyu20040729/ai-airport-concierge.git
 cd ai-airport-concierge
-
+```
 
 ### 2. Create and activate virtual environment (recommended)
 
-Windows:
-
+**Windows:**
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-
-Mac / Linux:
-
+**Mac / Linux:**
+```bash
 python3 -m venv venv
 source venv/bin/activate
-
+```
 
 ### 3. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Set up environment variables
 
 Create a `.env` file in the project root with:
 
+```
 OPENROUTER_API_KEY=your_api_key_here
+```
 
 ### 5. Run the application
 
+```bash
 uvicorn backend.main:app --reload
+```
 
 ### 6. Open the application
 
@@ -113,7 +121,7 @@ Visit: http://localhost:8000
 | openai/gpt-oss-20b:free | Chat/response generation |
 | nvidia/nemotron-3-embed-1b:free | Document embeddings for RAG |
 
-Note: The free tier has a daily limit of 50 requests. If you hit the rate limit (429), wait for the daily reset (UTC 00:00) or add credits to your OpenRouter account.
+**Note:** The free tier has a daily limit of 50 requests. If you hit the rate limit (429), wait for the daily reset (UTC 00:00) or add credits to your OpenRouter account.
 
 
 ## How It Works
@@ -145,13 +153,13 @@ Note: The free tier has a daily limit of 50 requests. If you hit the rate limit 
 
 ### Human Escalation
 
-- Auto-escalation: When no relevant knowledge is found, `needs_human: true` is returned
-- Manual escalation: Request Staff Assistance button and Request Video Call button
+- **Auto-escalation:** When no relevant knowledge is found, `needs_human: true` is returned
+- **Manual escalation:** Request Staff Assistance button and Request Video Call button
 
 ### Dual-Role Login
 
-- Passenger: Standard user experience, Analytics navigation hidden
-- Staff: Full access including Analytics dashboard
+- **Passenger:** Standard user experience, Analytics navigation hidden
+- **Staff:** Full access including Analytics dashboard
 
 
 ## Evaluation Mapping
